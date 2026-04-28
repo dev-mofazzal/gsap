@@ -7,38 +7,14 @@ body{
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    color: #fff;
+    background: #111;
 }
 
-#page1,
-#page2,
-#page3{
-    height: 100vh;
-    width: 100vw;
+.container{
+    height: 300px;
+    width: 100%;
     background: purple;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-#page2{
-    background: blue;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 60px;
-}
-#page3{
-    background: #000;
-    justify-content: start;
-}
-#box{
-    height: 300px;
-    width: 300px;
-    background: crimson;
-}
-#page3 h2{
-    font-size: 45vw;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: -20px;
 }
