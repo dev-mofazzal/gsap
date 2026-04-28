@@ -1,22 +1,25 @@
-var initialPath = 'M 0 100 Q 250 100 1500 100';
-var finalPath = 'M 0 100 Q 250 100 1500 100';
+var cursorWrap = document.querySelector('body');
+var cursorEle = document.querySelector('.cursor');
+var imageEle = document.querySelector('.image-wrap');
 
-var containerEle = document.querySelector('.container');
-
-containerEle.addEventListener('mousemove', function (ele) {
-    path = `M 0 100 Q ${ele.x} ${ele.y} 1500 100`;
-    console.log(path);
-    gsap.to('.container path', {
-        attr: { d: path },
-        duration: .3,
-        ease: "power3.out",
+cursorWrap.addEventListener('mousemove', function(ele){
+    gsap.to(cursorEle,{
+        x:ele.x,
+        y:ele.y,
+        duration: 0.5,
+    })
+})
+imageEle.addEventListener('mouseenter',function(ele){
+    cursorEle.innerHTML = 'View More';
+    gsap.to(cursorEle,{
+        scale: 4,
+        duration: .5,
     })
 });
-
-containerEle.addEventListener('mouseleave', function () {
-    gsap.to('.container path', {
-        attr: { d: finalPath },
-        ease: "elastic.out(1,0.1)",
-        duration: 1.5,
+imageEle.addEventListener('mouseleave',function(ele){
+    cursorEle.innerHTML = '';
+    gsap.to(cursorEle,{
+        scale: 1,
+        duration: .5,
     })
 })
