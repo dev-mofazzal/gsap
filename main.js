@@ -1,33 +1,23 @@
-var h1 = document.querySelector('h1');
-var h1Text = h1.textContent;
-var splittedText = h1Text.split('');
-
-var breakText = '';
-var halfVal = splittedText.length/2;
-console.log(halfVal);
-
-splittedText.forEach(function(ele, index){
-    if(index < halfVal){
-        breakText += `<span class="first">${ele}</span>`;
-    }else{
-        breakText += `<span class="last">${ele}</span>`;
+window.addEventListener('wheel', function (event) {
+    if (event.deltaY > 0) {
+        gsap.to('.marquee', {
+            transform: 'translateX(-200%)',
+            duration: 2.5,
+            ease: 'none',
+            repeat: -1
+        });
+        gsap.to('.marquee i',{
+            rotate: 180
+        })
+    } else {
+        gsap.to('.marquee', {
+            transform: 'translateX(0%)',
+            duration: 2.5,
+            ease: 'none',
+            repeat: -1
+        });
+        gsap.to('.marquee i',{
+            rotate: 0
+        })
     }
-});
-
-h1.innerHTML = breakText;
-
-gsap.from(".first",{
-    y: 30,
-    duration: .6,
-    delay: 0.5,
-    opacity: 0,
-    stagger: 0.15
-});
-
-gsap.from(".last",{
-    y: 30,
-    duration: .6,
-    delay: 0.5,
-    opacity: 0,
-    stagger: -0.15
 })
