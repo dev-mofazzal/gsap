@@ -4,7 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gsap Practice</title>
+    <title>Mofazzal — Digital Marketing Agency</title>
+    <meta name="description"
+        content="Navigating the digital landscape for success. We help businesses grow online through SEO, PPC, social media marketing, and content creation.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Remix Icon CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
         integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
@@ -14,34 +21,224 @@
 
 <body>
 
-    <div class="page page1"></div>
-    <div class="page page2">
-        <div class="marquee">
-            <h2>Thrive beyond Limits</h2>
-            <i class="ri-arrow-right-long-line"></i>
-        </div>
-        <div class="marquee">
-            <h2>Thrive beyond Limits</h2>
-            <i class="ri-arrow-right-long-line"></i>
-        </div>
-        <div class="marquee">
-            <h2>Thrive beyond Limits</h2>
-            <i class="ri-arrow-right-long-line"></i>
-        </div>
-        <div class="marquee">
-            <h2>Thrive beyond Limits</h2>
-            <i class="ri-arrow-right-long-line"></i>
-        </div>
-        <div class="marquee">
-            <h2>Thrive beyond Limits</h2>
-            <i class="ri-arrow-right-long-line"></i>
-        </div>
-        <div class="marquee">
-            <h2>Thrive beyond Limits</h2>
-            <i class="ri-arrow-right-long-line"></i>
-        </div>
+    <!-- ========== OVERLAY ========== -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ========== SIDEBAR ========== -->
+    <div class="sidebar" id="sidebar">
+        <i class="ri-close-line" id="close-icon"></i>
+        <ul class="sidebar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </div>
-    <div class="page page3"></div>
+
+    <!-- ========== WRAPPER ========== -->
+    <div class="wrapper">
+
+        <!-- ========== NAVBAR ========== -->
+        <nav id="navbar">
+            <div class="nav-inner">
+                <a href="#" class="logo">
+                    <i class="ri-flashlight-fill"></i> Mofazzal
+                </a>
+                <ul class="nav-links" id="nav-links-desktop">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#case-studies">Use Cases</a></li>
+                    <li><a href="#cta">Pricing</a></li>
+                    <li><a href="#contact">Blog</a></li>
+                </ul>
+                <div class="nav-right">
+                    <a href="#contact" class="btn btn-outline">Request a quote</a>
+                    <i class="ri-menu-3-line" id="menu-icon"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ========== HERO ========== -->
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title">Navigating the<br>digital landscape<br>for success</h1>
+                    <p class="hero-desc">Our digital marketing agency helps businesses grow and succeed online through a
+                        range of services including SEO, PPC, social media marketing, and content creation.</p>
+                    <div class="hero-btn">
+                        <a href="#contact" class="btn btn-dark">Book a consultation</a>
+                    </div>
+                </div>
+                <div class="hero-illustration">
+                    <div class="hero-visual">
+                        <i class="ri-megaphone-fill mega-icon"></i>
+                        <div class="float-icon float-1"><i class="ri-heart-fill"></i></div>
+                        <div class="float-icon float-2"><i class="ri-share-forward-fill"></i></div>
+                        <div class="float-icon float-3"><i class="ri-map-pin-fill"></i></div>
+                        <div class="float-icon float-4"><i class="ri-cursor-fill"></i></div>
+                        <div class="orbit-ring"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== BRANDS ========== -->
+        <section class="brands">
+            <div class="container brands-track">
+                <span class="brand-name">amazon</span>
+                <span class="brand-name">dribbble</span>
+                <span class="brand-name">HubSpot</span>
+                <span class="brand-name"><i class="ri-notion-fill"></i> Notion</span>
+                <span class="brand-name brand-netflix">NETFLIX</span>
+                <span class="brand-name">zoom</span>
+            </div>
+        </section>
+
+        <!-- ========== SERVICES ========== -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-badge">Services</h2>
+                    <p class="section-desc">At our digital marketing agency, we offer a range of services to help
+                        businesses grow and succeed online. These services include:</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Card 1 -->
+                    <div class="service-card card-1 card-light card-large">
+                        <div class="service-card-inner">
+                            <div class="service-text">
+                                <h3><span class="highlight-green">Search engine</span><br><span
+                                        class="highlight-green">optimization</span></h3>
+                                <a href="#" class="learn-more"><i class="ri-arrow-right-up-line"></i> Learn more</a>
+                            </div>
+                            <div class="service-icon-box">
+                                <i class="ri-search-eye-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="service-card card-2 card-dark">
+                        <div class="service-card-inner">
+                            <div class="service-text">
+                                <h3><span class="highlight-white">Pay per click</span><br><span
+                                        class="highlight-white">advertising</span></h3>
+                                <a href="#" class="learn-more learn-more-dark"><i class="ri-arrow-right-up-line"></i>
+                                    Learn more</a>
+                            </div>
+                            <div class="service-icon-box icon-box-dark">
+                                <i class="ri-cursor-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="service-card card-3 card-dark card-large">
+                        <div class="service-card-inner">
+                            <div class="service-text">
+                                <h3><span class="highlight-green">Social media</span><br><span
+                                        class="highlight-green">marketing</span></h3>
+                                <a href="#" class="learn-more learn-more-dark"><i class="ri-arrow-right-up-line"></i>
+                                    Learn more</a>
+                            </div>
+                            <div class="service-icon-box icon-box-dark">
+                                <i class="ri-share-circle-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="service-card card-4 card-light">
+                        <div class="service-card-inner">
+                            <div class="service-text">
+                                <h3><span class="highlight-green">E-mail</span><br><span
+                                        class="highlight-green">marketing</span></h3>
+                                <a href="#" class="learn-more"><i class="ri-arrow-right-up-line"></i> Learn more</a>
+                            </div>
+                            <div class="service-icon-box">
+                                <i class="ri-mail-send-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CTA ========== -->
+        <section class="cta-section" id="cta">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="cta-content">
+                        <h2>Let's make things happen</h2>
+                        <p>Contact us today to learn more about how our digital marketing services can help your
+                            business grow and succeed online.</p>
+                        <a href="#contact" class="btn btn-dark">Get your free proposal</a>
+                    </div>
+                    <div class="cta-visual">
+                        <div class="cta-icon-wrap">
+                            <i class="ri-rocket-2-fill"></i>
+                            <div class="cta-star star-1">✦</div>
+                            <div class="cta-star star-2">✦</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CASE STUDIES ========== -->
+        <section class="case-studies" id="case-studies">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-badge">Case study</h2>
+                    <p class="section-desc">Explore Real-Life Examples of Our Proven Digital Marketing Success through
+                        Our Case Studies</p>
+                </div>
+                <div class="cases-grid">
+                    <div class="case-card">
+                        <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50%
+                            increase in website traffic and a 25% increase in sales.</p>
+                        <a href="#" class="learn-more case-learn-more">Learn more <i
+                                class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                    <div class="case-card">
+                        <p>For a B2B software company, we developed an SEO strategy that resulted in a first page
+                            ranking for key keywords and a 200% increase in organic traffic.</p>
+                        <a href="#" class="learn-more case-learn-more">Learn more <i
+                                class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                    <div class="case-card">
+                        <p>For a national retail chain, we created a social media marketing campaign that increased
+                            followers by 25% and generated a 20% increase in online sales.</p>
+                        <a href="#" class="learn-more case-learn-more">Learn more <i
+                                class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FOOTER ========== -->
+        <footer id="contact">
+            <div class="container">
+                <div class="footer-top">
+                    <a href="#" class="logo logo-footer">
+                        <i class="ri-flashlight-fill"></i> Mofazzal
+                    </a>
+                    <ul class="footer-links">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Mofazzal. All rights reserved.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
 
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
