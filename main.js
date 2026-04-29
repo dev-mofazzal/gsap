@@ -1,36 +1,33 @@
-var closeEle = document.getElementById('close-icon');
-var openEle = document.getElementById('menu-icon');
-var overlay = document.getElementById('overlay');
-var tl = gsap.timeline();
+var h1 = document.querySelector('h1');
+var h1Text = h1.textContent;
+var splittedText = h1Text.split('');
 
-gsap.from(".logo", {
-    y: -40,
+var breakText = '';
+var halfVal = splittedText.length/2;
+console.log(halfVal);
+
+splittedText.forEach(function(ele, index){
+    if(index < halfVal){
+        breakText += `<span class="first">${ele}</span>`;
+    }else{
+        breakText += `<span class="last">${ele}</span>`;
+    }
+});
+
+h1.innerHTML = breakText;
+
+gsap.from(".first",{
+    y: 30,
+    duration: .6,
+    delay: 0.5,
     opacity: 0,
-    duration: 1,
+    stagger: 0.15
 });
 
-tl.to('.sidebar', {
-    right: 0,
-});
-
-tl.from('.nav-links li', {
-    x: 150,
+gsap.from(".last",{
+    y: 30,
+    duration: .6,
+    delay: 0.5,
     opacity: 0,
-    stagger: 0.1,
-});
-
-
-tl.from('#close-icon i', {
-    opacity: 0
-});
-
-tl.pause();
-
-
-openEle.addEventListener('click', function () {
-    tl.play();
-})
-
-closeEle.addEventListener('click', function () {
-    tl.reverse();
+    stagger: -0.15
 })
